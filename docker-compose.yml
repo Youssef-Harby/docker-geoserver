@@ -24,6 +24,7 @@ services:
    geoserver:
       image: kartoza/geoserver:${GS_VERSION}
       volumes:
+        - ./geo_data:/geo_data
         - geoserver-data:/opt/geoserver/data_dir
       ports:
         - ${GEOSERVER_PORT}:8080
